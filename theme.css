@@ -1,0 +1,155 @@
+/* Semantic theme tokens. CSS media fallback also works without JavaScript. */
+:root {
+  color-scheme: light;
+  --color-on-primary: #ffffff;
+  --color-primary-hover: #943719;
+  --theme-work: #eeeee8;
+  --theme-news: #dfe5da;
+  --theme-news-paper: #fafbf6;
+  --theme-news-border: #c5cdbd;
+  --theme-news-muted: #606650;
+  --theme-news-line: #d3dcc9;
+  --theme-workflow: #e8eddf;
+  --theme-workflow-text: #47533c;
+  --theme-liver: #e8d9c8;
+  --theme-liver-paper: #fffaf2;
+  --theme-liver-border: #d2c5b5;
+  --theme-liver-muted: #675439;
+  --theme-segment: #f2e8d8;
+  --theme-segment-border: #d8c8ac;
+  --theme-model: #655a45;
+  --theme-football: #eae7db;
+  --theme-football-text: #5c6052;
+  --theme-football-label: #626556;
+  --theme-contact: #b84524;
+  --theme-contact-title: #fdfcf7;
+  --theme-input: #fdfcf7;
+  --theme-error: #a13018;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #191c19;
+  --color-text: #eeeade;
+  --color-muted: #b7b8ad;
+  --color-primary: #e5a07c;
+  --color-border: #41483f;
+  --color-surface: #242a24;
+  --color-paper: #272d27;
+  --color-ink: #252c25;
+  --color-on-primary: #241c17;
+  --color-primary-hover: #f0b390;
+  --theme-work: #202520;
+  --theme-news: #303a30;
+  --theme-news-paper: #202820;
+  --theme-news-border: #4b5742;
+  --theme-news-muted: #bbc6b0;
+  --theme-news-line: #4b5742;
+  --theme-workflow: #303a2d;
+  --theme-workflow-text: #d0dcc6;
+  --theme-liver: #3b3027;
+  --theme-liver-paper: #29241f;
+  --theme-liver-border: #554735;
+  --theme-liver-muted: #dfc7ad;
+  --theme-segment: #403528;
+  --theme-segment-border: #65533d;
+  --theme-model: #66533b;
+  --theme-football: #2b3027;
+  --theme-football-text: #c2c6b5;
+  --theme-football-label: #b2b8a5;
+  --theme-contact: #30251f;
+  --theme-contact-title: #e5a07c;
+  --theme-input: #242a24;
+  --theme-error: #f1a184;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --color-bg: #191c19;
+    --color-text: #eeeade;
+    --color-muted: #b7b8ad;
+    --color-primary: #e5a07c;
+    --color-border: #41483f;
+    --color-surface: #242a24;
+    --color-paper: #272d27;
+    --color-ink: #252c25;
+    --color-on-primary: #241c17;
+    --color-primary-hover: #f0b390;
+    --theme-work: #202520;
+    --theme-news: #303a30;
+    --theme-news-paper: #202820;
+    --theme-news-border: #4b5742;
+    --theme-news-muted: #bbc6b0;
+    --theme-news-line: #4b5742;
+    --theme-workflow: #303a2d;
+    --theme-workflow-text: #d0dcc6;
+    --theme-liver: #3b3027;
+    --theme-liver-paper: #29241f;
+    --theme-liver-border: #554735;
+    --theme-liver-muted: #dfc7ad;
+    --theme-segment: #403528;
+    --theme-segment-border: #65533d;
+    --theme-model: #66533b;
+    --theme-football: #2b3027;
+    --theme-football-text: #c2c6b5;
+    --theme-football-label: #b2b8a5;
+    --theme-contact: #30251f;
+    --theme-contact-title: #e5a07c;
+    --theme-input: #242a24;
+    --theme-error: #f1a184;
+  }
+}
+.header-actions{display:flex;align-items:center;gap:var(--space-6);flex-shrink:0}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-width:44px;min-height:44px;padding:var(--space-2) var(--space-3);border:1px solid var(--color-border);border-radius:var(--radius-sm);font-size:var(--text-sm);color:var(--color-text)}
+.theme-toggle:hover{background:var(--color-surface)}
+.theme-toggle svg{flex-shrink:0}
+.theme-sun{display:none}
+[data-theme="dark"] .theme-sun{display:block}
+[data-theme="dark"] .theme-moon{display:none}
+::selection{background:var(--color-primary);color:var(--color-on-primary)}
+.skip-link{background:var(--color-text);color:var(--color-bg)}
+.button.primary,.chapter[open] .chapter-number{color:var(--color-on-primary)}
+.button.primary:hover{background:var(--color-primary-hover)}
+.work-section{background:var(--theme-work)}
+.notebook{color:#fdfcf7}
+.visual-arrow{background:var(--theme-input);color:var(--color-text)}
+.project-visual:hover .visual-arrow{background:var(--color-text);color:var(--color-bg)}
+.visual-news{background:var(--theme-news)}
+.visual-liver{background:var(--theme-liver)}
+.sample-badge{color:var(--theme-news-muted)}
+.visual-liver .sample-badge{color:var(--theme-liver-muted)}
+.research-sheet{background:var(--theme-news-paper);border-color:var(--theme-news-border)}
+.research-sheet-head,.research-sheet-foot{color:var(--theme-news-muted);border-color:var(--theme-news-border)}
+.news-lines i{background:var(--theme-news-line)}
+.workflow{color:var(--theme-workflow-text)}
+.workflow>span{background:var(--theme-workflow);border-color:var(--theme-news-line)}
+.liver-sheet{background:var(--theme-liver-paper);border-color:var(--theme-liver-border)}
+.liver-sheet .research-sheet-head,.liver-sheet .research-sheet-foot{color:var(--theme-liver-muted);border-color:var(--theme-liver-border)}
+.segmentation-flow:before{background:var(--theme-segment-border)}
+.segmentation-flow>span{background:var(--theme-segment);color:var(--theme-liver-muted);border-color:var(--theme-segment-border)}
+.segmentation-flow .model-block{background:var(--theme-model);color:#fffaf0;border-color:var(--theme-model)}
+.screen-collection .favorite-titles>li{border-color:var(--color-border)}
+.football-favorites{background:var(--theme-football)}
+.football-players{color:var(--theme-football-text)}
+.football-players>span{color:var(--theme-football-label)}
+.contact-section{background:var(--theme-contact);color:#fdfcf7}
+.contact-top .eyebrow,.contact-content p,.contact-bottom{color:#fdfcf7}
+.contact-content h2>span{color:var(--theme-contact-title)}
+.contact-content .button.dark{background:#fdfcf7;color:#252720}
+.contact-section :focus-visible{outline-color:#fdfcf7}
+#personalize-form input{background:var(--theme-input)}
+.form-error{color:var(--theme-error)}
+@media(max-width:1100px){
+  .site-header{gap:var(--space-4)}
+  .header-actions{gap:var(--space-4)}
+  .desktop-nav{gap:var(--space-4)}
+}
+@media(max-width:800px){
+  .theme-label{display:none}
+  .theme-toggle{padding:var(--space-2)}
+}
+@media(max-width:560px){
+  .site-header{gap:var(--space-3)}
+  .site-header .wordmark{font-size:var(--text-base);max-width:calc(100% - 124px)}
+  .header-actions{gap:var(--space-3)}
+  .menu-toggle{gap:var(--space-2)}
+}

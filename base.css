@@ -1,0 +1,15 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:110px}
+body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;color:var(--color-text);background:var(--color-bg)}
+img,svg,video,canvas{display:block;max-width:100%;height:auto}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{line-height:1.12;text-wrap:balance}
+p{max-width:72ch;text-wrap:pretty}
+button,a,input{transition:color var(--transition),background var(--transition),border-color var(--transition),transform var(--transition)}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:5px}
+::selection{background:var(--color-primary);color:white}
+[hidden]{display:none!important}
+.skip-link{position:fixed;top:-80px;left:16px;z-index:200;background:var(--color-text);color:white;padding:12px 24px}.skip-link:focus{top:12px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
